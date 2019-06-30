@@ -14,7 +14,7 @@ branches:
 stages:
   - name: Test
   - name: Report
-    if: NOT branch = production AND type = push
+    if: NOT branch = production
   - name: Deploy
     if: branch = production AND type = push
 
