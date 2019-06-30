@@ -27,9 +27,7 @@ jobs:
     - stage: Report
       script: yarn report
     - stage: Danger
-      script:
-        - yarn danger ci
-      script: yarn report
+      script: yarn danger ci
     - stage: Deploy
       script: skip
       before_deploy:
