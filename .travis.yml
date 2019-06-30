@@ -16,12 +16,9 @@ jobs:
     - stage: test
       script: yarn test 
     - stage: report
-      script: yarn report
-    - stage: deploy
       if: (branch = master) AND (type = push)
       script: yarn report
-
-      if: (branch = production) AND (type = push)
+    - stage: deploy
       script: skip
       before_deploy:
         - npm install netlify-cli -g
