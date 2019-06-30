@@ -17,8 +17,7 @@ jobs:
       script: yarn test 
     - stage: deploy
       if: (branch = master) AND (type = push)
-      script:
-        - yarn report
+      script: yarn report
 
       if: (branch = production) AND (type = push)
       script: skip
