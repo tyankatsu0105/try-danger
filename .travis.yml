@@ -15,6 +15,7 @@ stages:
   - name: Test
   - name: Report
   - name: Deploy
+    if: branch = production AND type = push
 
 jobs:
   include:
