@@ -11,17 +11,20 @@ branches:
     - production
     - master
 
+stages:
+  - name: Test
+  - name: Report
+    if: NOT branch = production
+  - name: Deploy
+    if: branch = production AND type = push
+
 jobs:
   include:
-    - stage: test
-      script: yarn test 
-    - stage: report
+    - stage: Test
+      script: yarn test
+    - stage: Report
       script: yarn report
-    - stage: deploy
-      if: (branch = master) AND (type = push)
-      script: yarn report
-
-      if: (branch = production) AND (type = push)
+    - stage: Deploy
       script: skip
       before_deploy:
         - npm install netlify-cli -g
