@@ -6,7 +6,7 @@ GitHubでPR前後にパフォーマンスを表示するjsonをdanger経由で�
 
 ## やること
 - [x] Netlifyでdeployさせる
-- [ ] TravisでNetlifyにdeployさせる
+- [x] TravisでNetlifyにdeployさせる
 - [ ] dangerを登録する
 - [ ] Travis上でパフォーマンス示すjson作成する
 - [ ] Travis上でdanger動かす
