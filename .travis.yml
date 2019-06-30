@@ -13,6 +13,8 @@ branches:
 
 jobs:
   include:
+    - stage: test
+      script: yarn test 
     - stage: deploy
       if: (branch = master) AND (type = push)
       script: yarn report
