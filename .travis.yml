@@ -2,8 +2,6 @@ language: node_js
 node_js:
   - 11
 
-conditions: v1
-
 dist: trusty
 sudo: false
 cache: yarn
@@ -16,9 +14,7 @@ branches:
 stages:
   - name: Test
   - name: Report
-    if: branch = master AND type = push
   - name: Deploy
-    if: branch = production AND type = push
 
 jobs:
   include:
