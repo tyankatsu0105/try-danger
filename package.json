@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "_report:build": "vue-cli-service build --report-json",
     "lint": "vue-cli-service lint",
-    "_report:output": "node report.js",
+    "_report:output": "node scripts/report.js",
     "report": "run-s _report:build _report:output"
   },
   "dependencies": {
