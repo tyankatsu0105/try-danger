@@ -14,6 +14,7 @@ branches:
     - master
 
 stages:
+  - name: Test
   - name: Report
     if: branch = master AND type = push
   - name: Deploy
@@ -21,6 +22,8 @@ stages:
 
 jobs:
   include:
+    - stage: Test
+      script: yarn test
     - stage: Report
       script: yarn report
     - stage: Deploy
