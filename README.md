@@ -1,29 +1,12 @@
 # try-danger
 
-## Project setup
-```
-yarn install
-```
+## 目標
+GitHubでPR前後にパフォーマンスを表示するjsonをdanger経由で表示させる
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## やること
+- [ ] Netlifyでdeployさせる
+- [ ] TravisでNetlifyにdeployさせる
+- [ ] dangerを登録する
+- [ ] Travis上でパフォーマンス示すjson作成する
+- [ ] Travis上でdanger動かす
+- [ ] dangerでjsonを取得して表示する
