@@ -13,11 +13,14 @@ branches:
 
 jobs:
   include:
-    - if: (branch = master) AND (type = push)
-      script:
-        - yarn report
+  - stage: test
+    script: yarn test 
+  - stage: deploy
+    if: (branch = master) AND (type = push)
+    script:
+      - yarn report
 
-    - if: (branch = production) AND (type = push)
+    if: (branch = production) AND (type = push)
       before_deploy:
         - npm install netlify-cli -g
         - yarn build
