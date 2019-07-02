@@ -15,6 +15,8 @@ stages:
   - name: Test
   - name: Report
     if: NOT branch = production
+  - name: Danger
+    if: NOT branch = production
   - name: Deploy
     if: branch = production AND type = push
 
@@ -24,6 +26,8 @@ jobs:
       script: yarn test
     - stage: Report
       script: yarn report
+    - stage: Danger
+      script: yarn danger ci
     - stage: Deploy
       script: skip
       before_deploy:
