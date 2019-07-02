@@ -1,4 +1,3 @@
-import { message } from "danger";
 const fs = require("fs");
 
 const report = JSON.parse(fs.readFileSync("./output.json", "utf-8"));
@@ -13,4 +12,4 @@ report.forEach(element => {
   `;
 });
 
-message(reportText);
+console.log(reportText);
