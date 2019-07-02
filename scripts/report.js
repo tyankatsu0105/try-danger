@@ -23,7 +23,10 @@ const toKB = size =>
 
 const result = assets.map(asset => {
   const { name, size } = asset;
-  return { name, size: toKB(size), numeric: size };
+  return `### ${name}
+- ${toKB(size)}
+- ${size}
+`;
 });
 
 fs.writeFileSync(output, JSON.stringify(result, null, 2));
