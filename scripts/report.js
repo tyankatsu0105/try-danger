@@ -1,14 +1,14 @@
 // ==================================
 // Settings
 // ==================================
-const fs = require("fs");
-const fsExtra = require("fs-extra");
+const fs = require('fs');
+const fsExtra = require('fs-extra');
 
-const path = require("path");
+const path = require('path');
 const originReport = JSON.parse(
-  fs.readFileSync(path.join("./dist", "report.json"), "utf-8")
+  fs.readFileSync(path.join('./dist', 'report.json'), 'utf-8')
 );
-const output = path.join("./output.json");
+const output = path.join('./output.json');
 
 // 桁の指定
 const selectDigit = 100;
@@ -31,4 +31,4 @@ const result = assets.map(asset => {
 
 fs.writeFileSync(output, JSON.stringify(result, null, 2));
 
-fsExtra.remove(path.join("./dist"));
+fsExtra.remove(path.join('./dist'));
