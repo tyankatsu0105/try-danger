@@ -25,7 +25,7 @@ jobs:
     - stage: Report
       script: 
         - yarn --silent bundlesize > reportBundlesize.txt
-        - yarn bundlesize:output
+        - yarn size
         - yarn danger ci
     - stage: Deploy
       script: skip
