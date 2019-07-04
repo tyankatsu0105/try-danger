@@ -26,6 +26,7 @@ jobs:
       script: 
         - yarn report
         - yarn danger ci
+        - yarn bundlesize
     - stage: Deploy
       script: skip
       before_deploy:
