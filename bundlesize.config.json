@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "path": "./dist/js/*.js"
+    },
+    {
+      "path": "./dist/css/*.css"
+    },
+    {
+      "path": "./dist/img/*",
+      "compression": "none"
+    }
+  ]
+}
