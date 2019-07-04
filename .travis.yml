@@ -24,7 +24,8 @@ jobs:
       script: yarn test
     - stage: Report
       script: 
-        - yarn report
+        - yarn _bundlesize:report
+        - yarn bundlesize:output
         - yarn danger ci
     - stage: Deploy
       script: skip
