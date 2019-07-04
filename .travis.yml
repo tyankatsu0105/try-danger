@@ -25,7 +25,6 @@ jobs:
     - stage: Report
       script: 
         - yarn report
-        - yarn bundlesize
         - yarn danger ci
     - stage: Deploy
       script: skip
